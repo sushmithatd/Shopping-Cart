@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">My Shop</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Cart <span class="cart-icon">🛒</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart Content Area -->
+    <main>
+        <div class="cart-container">
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-totals">
+                <h3>Cart Totals</h3>
+                <div class="subtotal">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">₹0.00</span>
+                </div>
+                <div class="total">
+                    <span>Total:</span>
+                    <span id="total">₹0.00</span>
+                </div>
+                <button id="checkout-btn">Checkout</button>
+                <button id="add-item-btn">Add New Item</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="service-icon">✅ High Quality</div>
+            <div class="service-icon">🔒 Warranty Protection</div>
+            <div class="service-icon">🚚 Fast Delivery</div>
+            <div class="service-icon">🔄 Easy Returns</div>
+        </div>
+    </footer>
+
+    <!-- Modal for Confirmation -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to remove this item?</p>
+            <button id="confirm-remove-btn">Yes</button>
+            <button id="cancel-remove-btn">No</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

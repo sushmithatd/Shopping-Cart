@@ -1,0 +1,178 @@
+/* Basic styles for the cart page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #343a40;
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #495057;
+}
+
+/* Main Container Styles */
+main {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px; /* Limit max width for large screens */
+}
+
+/* Cart Items Section */
+.cart-items {
+    flex: 1;
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+}
+
+/* Cart Totals Section */
+.cart-totals {
+    width: 300px;
+    padding-left: 20px;
+}
+
+.cart-totals h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+/* Subtotal and Total Styles */
+.subtotal, .total {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-icon {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .cart-container {
+        flex-direction: row; /* Change layout to row on larger screens */
+    }
+
+    .cart-items {
+        flex: 2;
+        border-right: 1px solid #ccc;
+        padding-right: 30px;
+    }
+
+    .cart-totals {
+        flex: 1;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-container {
+        flex-direction: column;
+    }
+
+    .cart-totals {
+        width: auto; /* Full width on smaller screens */
+        padding-left: 0;
+    }
+}
